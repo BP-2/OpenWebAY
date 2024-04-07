@@ -137,7 +137,7 @@ const ColorDimmer = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setC
 
       </label>
       <label htmlFor="greyColors" className="flex items-center cursor-pointer ml-4">
-      <span className="mr-2">Grey-scale contrast:</span>
+      <span className="mr-2">Greyscale:</span>
       <input
         type="checkbox"
         id="greyColors"
