@@ -1,5 +1,6 @@
 # OpenWebAY: Enhancing Web Accessibility
 [![npm version](https://badge.fury.io/js/open-web-ay.svg)](https://badge.fury.io/js/open-web-ay)
+[![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](https://github.com/BP-2/OpenWebAY/LICENSE) 
 [![NPM Downloads](https://img.shields.io/npm/dt/open-web-ay.svg?style=flat)]()  
 
 **OpenWebAY** is a lightweight, customizable component designed to make websites more accessible. It's tailored to provide free, lightweight, and customizable accessibility features, targeting underrepresented areas of the internet run by solo devs or small teams.
