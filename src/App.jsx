@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import ColorDimmer from './Components/ColorDimmer';
+import Deploy from './Deploy';
 import './App.css';
 
 function App() {
   const [showCursorBlock, setShowCursorBlock] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [colorDimmerOpen, setColorDimmerOpen] = useState(false); // State to track whether color dimmer is open
+  const [accessibilityPanelOpen, setAccessibilityPanelOpen] = useState(false); // State to track whether color dimmer is open
 
-  const toggleColorDimmer = () => {
-    setColorDimmerOpen(!colorDimmerOpen);
+  const toggleAccessibilityPanel = () => {
+    setAccessibilityPanelOpen(!accessibilityPanelOpen);
   };
 
-  const closeColorDimmer = () => {
-    setColorDimmerOpen(false); // Close the color dimmer
+  const closeAccessibilityPanel = () => {
+    setAccessibilityPanelOpen(false); // Close the color dimmer
   };
 
   return (
@@ -34,33 +34,7 @@ function App() {
         </ul>
         ... make it extremely hard for certain communities to digest the internet.</p>
         <p>That is why I made this component, to freely share accessibility across the internet. :)</p>
-
-        {!colorDimmerOpen && (
-          <button
-            onClick={toggleColorDimmer}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 fixed bottom-4 right-4"
-          >
-            Open Accessibility Controller
-          </button>
-        )}
-        
-        {colorDimmerOpen && (
-          <ColorDimmer
-            showCursorBlock={showCursorBlock}
-            setShowCursorBlock={setShowCursorBlock}
-            cursorPosition={cursorPosition}
-            setCursorPosition={setCursorPosition}
-            closeColorDimmer={closeColorDimmer} // Pass the function to close the color dimmer
-          />
-        )}
-        
-        {showCursorBlock && (
-          <>
-            <div className="cursor-bar top-bar" style={{ top: cursorPosition.y - 140 }}></div>
-            <div className="cursor-bar bottom-bar" style={{ top: cursorPosition.y + 40 }}></div>
-          </>
-        )}
-        
+        <Deploy/>
       </div>
     </>
   );

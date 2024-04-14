@@ -1,11 +1,22 @@
 {
-  "name": "bhack",
-  "private": true,
-  "version": "0.0.0",
+  "name": "open-web-ay",
+  "private": false,
+  "version": "0.0.23",
   "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/Deploy.jsx",
+      "require": "./src/Deploy.jsx"
+    },
+    "./AccessibilityPanel.css": {
+      "import": "./src/index.css",
+      "require": "./src/index.css"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp src/components/AccessibilityPanel.jsx dist/index.js && cp src/index.css dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -14,6 +25,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",

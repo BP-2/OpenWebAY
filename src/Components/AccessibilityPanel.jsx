@@ -1,31 +1,18 @@
 import React, { useState, useEffect } from 'react';
-const Checkmark = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="feather feather-check"
-  >
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
+import "../index.css";
 
-const ColorDimmer = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setCursorPosition, closeColorDimmer}) => {
+const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setCursorPosition, closeAccessibilityPanel}) => {
   const [isDimmed, setIsDimmed] = useState(false);
   const [isBright, setIsBright] = useState(false);
   const [isContrast, setIsContrast] = useState(false);
   const [isGrey, setIsGrey] = useState(false);
   const [isLargeText, setIsLargeText] = useState(false);
-  const [isBlueBoxEnabled, setIsBlueBoxEnabled] = useState(false); // State for enabling/disabling blue box feature
-  const [isGreenBoxEnabled, setIsGreenBoxEnabled] = useState(false); // State for enabling/disabling green box feature
+  const [isBlueBoxEnabled, setIsBlueBoxEnabled] = useState(false); 
+  const [isGreenBoxEnabled, setIsGreenBoxEnabled] = useState(false); 
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setCursorPosition({ x: event.clientX, y: event.clientY }); // Update cursorPosition state
+      setCursorPosition({ x: event.clientX, y: event.clientY }); 
     };
 
     if (showCursorBlock) {
@@ -94,82 +81,84 @@ const ColorDimmer = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setC
   const toggleGreenBox = () => {
     setIsGreenBoxEnabled(!isGreenBoxEnabled);
   };
+
   return (
-  <div className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-md p-1">
-    <div class="x-close" onClick={closeColorDimmer}></div>
+  <div className="accessibility-panel">
+    <div className="x-close" onClick={closeAccessibilityPanel}></div>
     <h2><b>Accessibility Controller</b></h2>
-      <label htmlFor="colorDimmer" className="flex items-center cursor-pointer ml-4">
+      <label htmlFor="dimColors" className="flex-container ">
         <span className="mr-2">Dim Colors:</span>
         <input
           type="checkbox"
-          id="colorDimmer"
+          id="dimColors"
           checked={isDimmed}
           onChange={toggleDim}
-          className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
+          className="checkbox-input"
         />
         {isDimmed && '✅'}
         {!isDimmed && '❌'}
       </label>
-      <label htmlFor="contrastColors" className="flex items-center cursor-pointer ml-4">
-      <span className="mr-2">Bright colors:</span>
-      <input
-        type="checkbox"
-        id="contrastColors"
-        checked={isContrast}
-        onChange={toggleContrast}
-        className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
-      />
-      {isContrast && '✅'}
-      {!isContrast && '❌'}
-
-      </label>
-      <label htmlFor="brightColors" className="flex items-center cursor-pointer ml-4">
+      <label htmlFor="brightColors" className="flex-container ">
       <span className="mr-2">Brightness:</span>
       <input
         type="checkbox"
-        id="colorBright"
+        id="brightColors"
         checked={isBright}
         onChange={toggleBright}
-        className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
+        className="checkbox-input"
       />
       {isBright && '✅'}
       {!isBright && '❌'}
 
       </label>
-      <label htmlFor="greyColors" className="flex items-center cursor-pointer ml-4">
+      <label htmlFor="contrastColors" className="flex-container ">
+      <span className="mr-2">High Contrast:</span>
+      <input
+        type="checkbox"
+        id="contrastColors"
+        checked={isContrast}
+        onChange={toggleContrast}
+        className="checkbox-input"
+      />
+      {isContrast && '✅'}
+      {!isContrast && '❌'}
+
+      </label>
+      
+      <label htmlFor="greyColors" className="flex-container ">
       <span className="mr-2">Greyscale:</span>
       <input
         type="checkbox"
         id="greyColors"
         checked={isGrey}
         onChange={toggleGrey}
-        className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
+        className="checkbox-input"
       />
       {isGrey && '✅'}
       {!isGrey && '❌'}
 
       </label>
-      <label htmlFor="largeText" className="flex items-center cursor-pointer ml-4">
+      <label htmlFor="largeText" className="flex-container ">
         <span className="mr-2">Large Text:</span>
         <input
           type="checkbox"
           id="largeText"
           checked={isLargeText}
           onChange={toggleLargeText}
-          className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
+          className="checkbox-input"
         />
         {isLargeText && '✅'}
         {!isLargeText && '❌'}
 
       </label>
-      <label htmlFor="cursorBlock" className="flex items-center cursor-pointer ml-4">
+      <label htmlFor="cursorBlock" className="flex-container ">
         <span className="mr-2">Cursor Block:</span>
         <input
           type="checkbox"
           id="cursorBlock"
           checked={showCursorBlock}
           onChange={toggleCursorBlock}
-          className="h-6 w-6 rounded-md bg-gray-300 appearance-none focus:outline-none cursor-pointer checkbox-input"
+          className="checkbox-input"
         />
         {showCursorBlock && '✅'}
         {!showCursorBlock && '❌'}
@@ -213,4 +202,4 @@ const ColorDimmer = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setC
   );
 };
 
-export default ColorDimmer;
+export default accessibilityPanel;
