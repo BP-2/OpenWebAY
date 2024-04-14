@@ -1,9 +1,10 @@
 {
   "name": "open-web-ay",
   "private": false,
-  "version": "0.0.26",
+  "version": "0.0.28",
   "type": "module",
   "main": "dist/index.js",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./src/Deploy.jsx",
