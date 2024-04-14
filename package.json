@@ -1,7 +1,7 @@
 {
   "name": "open-web-ay",
   "private": false,
-  "version": "0.0.25",
+  "version": "0.0.26",
   "type": "module",
   "main": "dist/index.js",
   "exports": {
@@ -14,6 +14,11 @@
       "require": "./src/index.css"
     }
   },
+    "keywords": [
+      "accessibility",
+      "easy",
+      "lightweight"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp src/components/AccessibilityPanel.jsx dist/index.js && cp src/index.css dist/",
