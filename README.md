@@ -26,7 +26,8 @@
 
 Images of current tool (04/14/24):
 
+<img width="900" alt="Tool on a template webpage" src="https://github.com/BP-2/OpenWebAY/assets/57198128/fc284880-52c7-4c39-a08d-18efc3d146ce">
 <img width="263" alt="Tool open" src="https://github.com/BP-2/OpenWebAY/assets/57198128/c4927a15-7a31-4cc5-9f19-53da709e5d90">
 <img width="272" alt="Tool closed" src="https://github.com/BP-2/OpenWebAY/assets/57198128/273b3226-b712-4a75-85d4-e9b982d73946">
-<img width="1000" alt="Tool on a template webpage" src="https://github.com/BP-2/OpenWebAY/assets/57198128/fc284880-52c7-4c39-a08d-18efc3d146ce">
+
 
