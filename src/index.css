@@ -88,6 +88,9 @@ a:hover {
   padding: 0.65rem;
 }
 
+.npm-link{
+  color: #FFFFFF;
+}
 .checkbox-input {
   height: 1.5rem;
   width: 1.5rem;

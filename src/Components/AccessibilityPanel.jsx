@@ -198,6 +198,9 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
           `}
         </style>
       )}
+      <div>
+          <a className="npm-link" href="https://www.npmjs.com/package/open-web-ay?activeTab=readme">Find us on <u>NPM</u>!</a>
+      </div>
     </div>
   );
 };
