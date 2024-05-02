@@ -3,7 +3,7 @@ import AccessibilityPanel from './Components/AccessibilityPanel';
 import './App.css';
 import './index.css';
 
-function Deploy() {
+function Deploy({ theme }) {
   const [showCursorBlock, setShowCursorBlock] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [accessibilityPanelOpen, setAccessibilityPanelOpen] = useState(false); // State to track whether color dimmer is open
@@ -18,17 +18,16 @@ function Deploy() {
 
   return (
     <>
-    
-    <div className="ally-container">
+      <div className={`ally-container`}>
         {!accessibilityPanelOpen && (
           <button
             onClick={toggleAccessibilityPanel}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 fixed bottom-4 right-4"
+            className={`closed-button-${theme}`}
           >
             Open Accessibility Controller
           </button>
         )}
-        
+
         {accessibilityPanelOpen && (
           <AccessibilityPanel
             showCursorBlock={showCursorBlock}
@@ -36,16 +35,16 @@ function Deploy() {
             cursorPosition={cursorPosition}
             setCursorPosition={setCursorPosition}
             closeAccessibilityPanel={closeAccessibilityPanel} // Pass the function to close the color dimmer
+            theme={theme}
           />
         )}
-        
+
         {showCursorBlock && (
           <>
             <div className="cursor-bar top-bar" style={{ top: cursorPosition.y - 140 }}></div>
             <div className="cursor-bar bottom-bar" style={{ top: cursorPosition.y + 40 }}></div>
           </>
         )}
-        
       </div>
     </>
   );

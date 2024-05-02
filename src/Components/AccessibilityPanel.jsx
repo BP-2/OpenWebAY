@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../index.css";
 
-const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setCursorPosition, closeAccessibilityPanel}) => {
+const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setCursorPosition, closeAccessibilityPanel, theme}) => {
   const [isDimmed, setIsDimmed] = useState(false);
   const [isBright, setIsBright] = useState(false);
   const [isContrast, setIsContrast] = useState(false);
@@ -83,7 +83,7 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
   };
 
   return (
-  <div className="accessibility-panel">
+  <div className={`accessibility-panel-${theme}`}>
     <div className="x-close" onClick={closeAccessibilityPanel}></div>
     <h2><b>Accessibility Controller</b></h2>
       <label htmlFor="dimColors" className="flex-container ">
