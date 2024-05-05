@@ -165,8 +165,8 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
 
       </label>
       <p>Cognitive display settings:</p>
-      <button onClick={toggleBlueBox}>Text Boxes</button>
-      <button onClick={toggleGreenBox}>Buttons</button>
+      <button className="buttons-boxes" onClick={toggleBlueBox}>Text Boxes</button>
+      <button className="buttons-boxes" onClick={toggleGreenBox}>Buttons</button>
       
 
       
