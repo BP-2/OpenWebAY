@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../index.css";
+import "../WebAY.css";
 
 const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPosition, setCursorPosition, closeAccessibilityPanel, theme}) => {
   const [isDimmed, setIsDimmed] = useState(false);
@@ -199,7 +199,7 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
         </style>
       )}
       <div>
-          <a className="npm-link" href="https://www.npmjs.com/package/open-web-ay?activeTab=readme">Find us on <u>NPM</u>!</a>
+          <a className={`npm-link-${theme}`} href="https://www.npmjs.com/package/open-web-ay?activeTab=readme">Find us on <u>NPM</u>!</a>
       </div>
     </div>
   );

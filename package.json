@@ -1,7 +1,7 @@
 {
   "name": "open-web-ay",
   "private": false,
-  "version": "0.0.33",
+  "version": "0.0.34",
   "type": "module",
   "main": "dist/index.js",
   "license": "MIT",
@@ -21,7 +21,7 @@
       "lightweight"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build && cp src/components/AccessibilityPanel.jsx dist/index.js && cp src/index.css dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

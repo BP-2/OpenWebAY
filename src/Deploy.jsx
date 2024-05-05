@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import AccessibilityPanel from './Components/AccessibilityPanel';
 import './App.css';
-import './index.css';
+import './WebAY.css';
+import Logo from "./assets/logo.png";
+// <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Accessibility.svg" alt="Accessibility button. Logo credit to  Dave Braunschweig and distributed under the CC BY-SA 4.0 Deed license."/>
 
 function Deploy({ theme }) {
   const [showCursorBlock, setShowCursorBlock] = useState(false);
@@ -24,8 +26,8 @@ function Deploy({ theme }) {
             onClick={toggleAccessibilityPanel}
             className={`closed-button-${theme}`}
           >
-            Open Accessibility Controller
-          </button>
+            <img className="logo-acc" src={Logo} alt="Accessibility button. Logo credit to  Dave Braunschweig and distributed under the CC BY-SA 4.0 Deed license."/>          
+            </button>
         )}
 
         {accessibilityPanelOpen && (
