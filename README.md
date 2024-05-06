@@ -20,10 +20,10 @@
    npm i open-web-ay
 2. **Import the Component**: 
    ```javascript
-   import AccessibilityPanel from "open-web-ay";
+   import Deploy from "open-web-ay";
 3. **Use component:**
    ```javascript
-   <AccessibilityPanel />
+   <Deploy />
 
 **Images of current tool (04/14/24):**
 
