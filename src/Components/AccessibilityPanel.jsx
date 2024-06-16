@@ -91,7 +91,7 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
   return (
   <div className={`accessibility-panel-${theme}`}>
     <div className="x-close" onClick={closeAccessibilityPanel}></div>
-    <h2><b>OWAY</b></h2>
+    <h2 className='small-header'><b>OWAY</b></h2>
     <div className='panel-config'>
       <label htmlFor="dimColors" className="flex-container ">
         <span className="mr-2">Dim Colors:</span>
