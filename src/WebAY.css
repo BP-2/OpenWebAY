@@ -332,7 +332,9 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-
+.small-header{
+  font-size: 1rem;
+}
 .buttons-boxes{
   background-color: #000000; 
   border: none;
