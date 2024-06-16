@@ -85,7 +85,8 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
   return (
   <div className={`accessibility-panel-${theme}`}>
     <div className="x-close" onClick={closeAccessibilityPanel}></div>
-    <h2><b>Accessibility Controller</b></h2>
+    <h2><b>OWAY</b></h2>
+    <div className='panel-config'>
       <label htmlFor="dimColors" className="flex-container ">
         <span className="mr-2">Dim Colors:</span>
         <input
@@ -95,8 +96,11 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
           onChange={toggleDim}
           className="checkbox-input"
         />
+                <div className='align-right'>
+
         {isDimmed && '✅'}
         {!isDimmed && '❌'}
+        </div>
       </label>
       <label htmlFor="brightColors" className="flex-container ">
       <span className="mr-2">Brightness:</span>
@@ -106,9 +110,12 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
         checked={isBright}
         onChange={toggleBright}
         className="checkbox-input"
-      />
+      />        
+      <div className='align-right'>
+
       {isBright && '✅'}
       {!isBright && '❌'}
+      </div>
 
       </label>
       <label htmlFor="contrastColors" className="flex-container ">
@@ -120,9 +127,11 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
         onChange={toggleContrast}
         className="checkbox-input"
       />
+              <div className='align-right'>
+
       {isContrast && '✅'}
       {!isContrast && '❌'}
-
+</div>
       </label>
       
       <label htmlFor="greyColors" className="flex-container ">
@@ -134,10 +143,13 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
         onChange={toggleGrey}
         className="checkbox-input"
       />
+              <div className='align-right'>
+
       {isGrey && '✅'}
       {!isGrey && '❌'}
-
+</div>
       </label>
+      
       <label htmlFor="largeText" className="flex-container ">
         <span className="mr-2">Large Text:</span>
         <input
@@ -147,9 +159,11 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
           onChange={toggleLargeText}
           className="checkbox-input"
         />
+                <div className='align-right'>
+
         {isLargeText && '✅'}
         {!isLargeText && '❌'}
-
+</div>
       </label>
       <label htmlFor="cursorBlock" className="flex-container ">
         <span className="mr-2">Cursor Block:</span>
@@ -160,10 +174,13 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
           onChange={toggleCursorBlock}
           className="checkbox-input"
         />
+        <div className='align-right'>
         {showCursorBlock && '✅'}
         {!showCursorBlock && '❌'}
+        </div>
 
       </label>
+      </div>
       <p>Cognitive display settings:</p>
       <button className="buttons-boxes" onClick={toggleBlueBox}>Text Boxes</button>
       <button className="buttons-boxes" onClick={toggleGreenBox}>Buttons</button>

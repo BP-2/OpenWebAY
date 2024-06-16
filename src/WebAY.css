@@ -111,13 +111,24 @@
   background-color: #D1D5DB;
   cursor: pointer;
 }
+.panel-config{
+  backdrop-filter: brightness(.5);
+  border: 1px solid black; 
+  border-radius: 4px;       
+}
+
 .flex-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   margin-left: 1rem; 
-  padding:.15rem;
+  padding: .15rem;
+  
 }
+.align-right{
+  margin-left: auto;
+}
+
 
 .closed-button-blue{
     background-color:  #3B82F6;
