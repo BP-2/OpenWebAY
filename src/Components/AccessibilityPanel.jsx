@@ -9,6 +9,8 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
   const [isLargeText, setIsLargeText] = useState(false);
   const [isBlueBoxEnabled, setIsBlueBoxEnabled] = useState(false); 
   const [isGreenBoxEnabled, setIsGreenBoxEnabled] = useState(false); 
+  const [isPurpleBoxEnabled, setIsPurpleBoxEnabled] = useState(false); 
+
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -81,6 +83,10 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
   const toggleGreenBox = () => {
     setIsGreenBoxEnabled(!isGreenBoxEnabled);
   };
+
+  const togglePurpleBox = () => {
+    setIsPurpleBoxEnabled(!isPurpleBoxEnabled);
+  }
 
   return (
   <div className={`accessibility-panel-${theme}`}>
@@ -181,22 +187,14 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
 
       </label>
       </div>
-      <p>Cognitive display settings:</p>
-      <button className="buttons-boxes" onClick={toggleBlueBox}>Text Boxes</button>
+      <p>Cognitive assistance:</p>
+      <button className="buttons-boxes" onClick={toggleBlueBox}>Text</button>
       <button className="buttons-boxes" onClick={toggleGreenBox}>Buttons</button>
-      
-
-      
+      <button className="buttons-boxes" onClick={togglePurpleBox}>Links</button>
       {isBlueBoxEnabled && (
         <style>
           {`
-            .text-box {
-              border: 2px solid blue;
-              padding: 5px;
-              margin: 5px;
-            }
-
-            h1, h2, h3, h4, h5, h6 {
+            h1, h2, h3, h4, h5, h6, p {
               border: 2px solid blue;
               padding: 5px;
               margin: 5px;
@@ -211,6 +209,16 @@ const accessibilityPanel = ({ showCursorBlock, setShowCursorBlock, cursorPositio
               border: 2px solid green;
               padding: 5px;
               margin: 5px;
+            }
+          `}
+        </style>
+      )}
+      {isPurpleBoxEnabled && (
+        <style>
+          {`
+            a {
+              border: 2px solid purple;
+              text-decoration: underline;
             }
           `}
         </style>

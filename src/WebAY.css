@@ -61,7 +61,7 @@
   bottom: 1rem;
   right: 1rem;
   background-color: #EC4899;
-  color: #000000;
+  color: #FFF;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -114,7 +114,9 @@
 .panel-config{
   backdrop-filter: brightness(.5);
   border: 1px solid black; 
-  border-radius: 4px;       
+  border-radius: 4px;    
+  overflow-y: auto;
+  height: 120px;
 }
 
 .flex-container {
@@ -127,6 +129,7 @@
 }
 .align-right{
   margin-left: auto;
+  padding-right: 10%;
 }
 
 
@@ -334,7 +337,7 @@
   background-color: #000000; 
   border: none;
   color: white;
-  padding: 10px 24px;
+  padding: 6px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

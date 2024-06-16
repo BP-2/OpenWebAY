@@ -34,7 +34,7 @@ function App() {
         </ul>
         ... make it extremely hard for certain communities to digest the internet.</p>
         <p>That is why I made this component, to freely share accessibility across the internet. :)</p>
-        <Deploy theme='blue'/>
+        <Deploy theme='red'/>
       </div>
     </>
   );
